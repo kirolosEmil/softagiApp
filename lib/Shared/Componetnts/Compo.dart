@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-var emailController = TextEditingController();
-var PassowrdController = TextEditingController();
-var FirstNameController = TextEditingController();
-var SecoundName  = TextEditingController();
 
 Widget difultButton({
   Color background = Colors.red   ,
@@ -31,10 +27,32 @@ Widget difultButton({
   ),
 );
 
+void buildProgress({context, text,}) => showDialog(
+  context: context,
+  builder: (context) => AlertDialog(
+    content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Row(
+              children: [
+                CircularProgressIndicator(),
+                Text(text),
+              ]
+          ),
+        ]
+    ),
+  ),
+);
+
 Widget headText ( String text )=> Text (text,
                       style: TextStyle (
                         fontSize: 23,
                         color: Colors.black ),);
+
+void navigateTo(context, widget) => Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => widget),
+);
 
 
 Widget Captions (String text) => Text (
@@ -91,7 +109,7 @@ Widget defultTextForm ({
 );
 
 Widget logo () =>  Image (
-image: AssetImage('assets/images/sky.png'),
+image: AssetImage('assets/images/sky-news-logo.png'),
 );
 
 Color backcolor () => Colors.indigo ;

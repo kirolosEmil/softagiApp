@@ -3,8 +3,6 @@ import 'package:sofatgi_home_work/Screens/LoginScreen/loginScreen.dart';
 import 'package:sofatgi_home_work/Screens/Register/Register.dart';
 import 'package:sofatgi_home_work/Shared/Componetnts/Compo.dart';
 
-
-
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,10 +12,7 @@ class WelcomeScreen extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: 50,
-            ),
+          children: <Widget>[
             logo(),
             SizedBox(
               height: 70,
@@ -26,12 +21,7 @@ class WelcomeScreen extends StatelessWidget {
               background: Colors.red[900],
                 text: 'login',
                 function: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LoginScreen(),
-                    ),
-                  );
+                  navigateTo(context, LoginScreen());
                 }),
             SizedBox(
               height: 20,
@@ -39,12 +29,7 @@ class WelcomeScreen extends StatelessWidget {
             difultButton(
                 text: 'Register',
                 function: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Register(),
-                    ),
-                  );
+                navigateTo(context, Register());
                 }),
             SizedBox(
               height: 20,
@@ -72,7 +57,7 @@ class WelcomeScreen extends StatelessWidget {
                   radius: 20,
                   backgroundColor: backcolor(),
                   child: Image(
-                    image: AssetImage('assets/images/google.png'),
+                    image: AssetImage('assets/images/google-glass-logo.png'),
                     height: 24,
                     color: Colors.white,
                   ),

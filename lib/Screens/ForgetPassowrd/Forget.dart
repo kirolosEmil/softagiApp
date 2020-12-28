@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sofatgi_home_work/Shared/Componetnts/Compo.dart';
 
 class forgetPassowrd extends StatelessWidget {
+  var emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

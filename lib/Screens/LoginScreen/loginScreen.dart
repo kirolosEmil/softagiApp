@@ -3,6 +3,8 @@ import 'file:///E:/Softagi/new_softagi/lib/Screens/ForgetPassowrd/Forget.dart';
 import 'package:sofatgi_home_work/Shared/Componetnts/Compo.dart';
 
 class LoginScreen extends StatelessWidget {
+  var emailController = TextEditingController();
+  var passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +33,7 @@ class LoginScreen extends StatelessWidget {
                   height: 20,
                 ),
                 defultTextForm(
-                    controller: PassowrdController,
+                    controller: passwordController,
                     Type: TextInputType.visiblePassword,
                     hint: '*******',
                     title: 'Pass'),
