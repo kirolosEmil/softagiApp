@@ -9,6 +9,7 @@ class forgetPassowrd extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Forget Passowrd'),
+        backgroundColor: defultColor,
       ),
       body: SingleChildScrollView(
       child :Padding(

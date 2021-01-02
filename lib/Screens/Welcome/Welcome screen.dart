@@ -7,7 +7,6 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -18,7 +17,6 @@ class WelcomeScreen extends StatelessWidget {
               height: 70,
             ),
             difultButton(
-              background: Colors.red[900],
                 text: 'login',
                 function: () {
                   navigateTo(context, LoginScreen());
@@ -32,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
                 navigateTo(context, Register());
                 }),
             SizedBox(
-              height: 20,
+              height:50,
             ),
             Captions('Or Login With'),
             SizedBox(
@@ -43,9 +41,9 @@ class WelcomeScreen extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 20,
-                  backgroundColor: backcolor(),
+                  backgroundColor: defultColor,
                   child: Image(
-                    image: AssetImage('assets/images/facebook.png'),
+                    image: AssetImage('assets/images/facebook2.png'),
                     height: 24,
                     color: Colors.white,
                   ),
@@ -55,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 CircleAvatar(
                   radius: 20,
-                  backgroundColor: backcolor(),
+                  backgroundColor: defultColor,
                   child: Image(
                     image: AssetImage('assets/images/google-glass-logo.png'),
                     height: 24,
